@@ -1,0 +1,19 @@
+session_name: $TMUX_SESSION_NAME-tmux
+before_script: vagrant up
+shell_command_before:
+  - vagrant ssh
+  - cd /vagrant
+windows:
+- window_name: LOG
+  layout: main-vertical
+  focus: true
+  panes:
+    - echo "command"
+- window_name: RESTART
+  layout: main-vertical
+  panes:
+    - echo "command"
+- window_name: COMMANDS
+  layout: main-vertical
+  panes:
+    - echo "command"

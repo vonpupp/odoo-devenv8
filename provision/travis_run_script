@@ -1,0 +1,20 @@
+#!/bin/bash
+
+set -e -x
+
+# TODO: Add sphinx
+#if [ "${DOC}" != "0" ]; then
+#    bin/travis-sphinx build
+#    exit 0
+#fi
+
+# TODO: Add robot
+#if [ "${ROBOT}" != "0" ]; then
+#    cp robot/config_80.py_template robot/config_80.py
+#    sed -i 's#ODOO_DB = "demo"#ODOO_DB = "openerp_test"#g' robot/config_80.py
+#    exit 0
+#fi
+
+bin/test_odoo -d openerp_test -i todo_app
+
+set +e +x
