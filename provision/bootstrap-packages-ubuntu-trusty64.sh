@@ -27,5 +27,5 @@ sudo dpkg -i *.deb
 cd -
 
 # Ativar postgres
-sudo /etc/init.d/postgres enable
-sudo /etc/init.d/postgres start
+sudo /etc/init.d/postgresql enable
+sudo /etc/init.d/postgresql start
